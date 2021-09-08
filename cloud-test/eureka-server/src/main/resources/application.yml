@@ -1,0 +1,15 @@
+# 定义Spring应用名称，它是一个微服务的名称，可以有许多实例
+spring:
+  application:
+    name: eureka-server
+
+server:
+  port: 5001
+eureka:
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+
+  instance:
+    # 服务治理中心服务器IP
+    hostname: 192.168.1.100

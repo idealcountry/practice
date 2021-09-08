@@ -1,0 +1,14 @@
+# 请求URL指向Eureka服务治理中心
+spring:
+  application:
+    name: user
+
+server:
+  port: 6001
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:5001/eureka/
+  instance:
+    # 服务实例名称
+    hostname: 192.168.1.100
