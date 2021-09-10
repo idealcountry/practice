@@ -34,8 +34,15 @@ public class FeignController {
     }
 
     @GetMapping("/users/{ids}")
-    public ResponseEntity<List<UserInfo>> findUsers2(@PathVariable("ids") Long []ids) {
-        return userFacade.findUsers2(ids);
+    public String findUsers2(@PathVariable("ids") Long []ids) {
+        ResponseEntity<List<UserInfo>> users2 = userFacade.findUsers2(ids);
+
+        System.out.println("打印users2的ResponseEntity版本");
+        System.out.println(users2);
+        System.out.println(users2.toString());
+
+        return users2.toString();
+//        return userFacade.findUsers2(ids);
     }
 
     @GetMapping("/user/delete/{id}")
