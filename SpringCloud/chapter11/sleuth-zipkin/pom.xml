@@ -47,23 +47,25 @@
             <version>2.12.3</version>
         </dependency>
 
-        <!-- zipkin持久化MySQL配置包 -->
+
+        <!--注意如果导入这些mysql的依赖会导致项目异常终止（会自动寻找数据源）-->
+      <!--  &lt;!&ndash; zipkin持久化MySQL配置包 &ndash;&gt;
         <dependency>
             <groupId>io.zipkin.java</groupId>
             <artifactId>zipkin-autoconfigure-storage-mysql</artifactId>
             <version>2.12.3</version>
         </dependency>
-        <!-- MySQL -->
+        &lt;!&ndash; MySQL &ndash;&gt;
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
             <version>5.1.48</version>
         </dependency>
-        <!-- Spring JDBC -->
+        &lt;!&ndash; Spring JDBC &ndash;&gt;
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-jdbc</artifactId>
-        </dependency>
+        </dependency>-->
 
         <!-- Zipkin配置ElasticSearch存储包 -->
         <dependency>

@@ -1,6 +1,11 @@
 spring:
   application:
     name: eureka-server
+  profiles:
+    active: peer1
+
+server:
+  port: 1001
 eureka:
   client:
     serviceUrl:
