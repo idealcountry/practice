@@ -22,22 +22,21 @@ import org.springframework.context.annotation.Configuration;
         // 默认配置类
         defaultConfiguration = FundConfiguration.class)
 public class GlobalConfiguration {
-//    // Bean Name和表4-1保持一致
-//    // 服务过滤器
-//    @Bean(name="ribbonServerListFilter")
-//    public ServerListFilter<Server> serverListFilter() {
-//        // 使用优先选择的过滤器
-//        ZonePreferenceServerListFilter filter
-//                = new ZonePreferenceServerListFilter();
-//        // 使用默认Zone
-//        filter.setZone(EndpointUtils.DEFAULT_ZONE);
-//        return filter;
-//    }
-//
-//    // 负载均衡策略
-//    @Bean
-//    public IRule rule() {
-//        // 使用随机选择服务的策略
-//        return new RandomRule();
-//    }
+    // 服务过滤器
+    @Bean(name="ribbonServerListFilter")
+    public ServerListFilter<Server> serverListFilter() {
+        // 使用优先选择的过滤器
+        ZonePreferenceServerListFilter filter
+                = new ZonePreferenceServerListFilter();
+        // 使用默认Zone
+        filter.setZone(EndpointUtils.DEFAULT_ZONE);
+        return filter;
+    }
+
+    // 负载均衡策略
+    @Bean
+    public IRule rule() {
+        // 使用随机选择服务的策略
+        return new RandomRule();
+    }
 }

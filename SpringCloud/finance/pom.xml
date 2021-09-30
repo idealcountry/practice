@@ -11,7 +11,7 @@
     <groupId>spring.cloud</groupId>
     <artifactId>finance</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <packaging>war</packaging>
+    <packaging>pom</packaging>
     <name>finance</name>
     <description>finance project for Spring Boot</description>
 

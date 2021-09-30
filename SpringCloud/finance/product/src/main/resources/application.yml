@@ -19,11 +19,14 @@ spring:
     # 当配置为“peer1”时选择application-peer1.yml作为配置文件；
     # 当配置为“peer2”时选择application-peer2.yml作为配置文件。
     active: peer1
+
 #
+
+
 #FUND: # 代表只对资金微服务执行这样的配置
 #  ribbon:
 #    NFLoadBalancerRuleClassName: com.netflix.loadbalancer.BestAvailableRule
-#    NFLoadBalancerPingClassName: com.netflix.loadbalancer.PingUrl
+#    NFLoadBalancerPingClassName: com.netflix.loadbalancer.NIWSDiscoveryPing
 #    # 连接超时时间，单位毫秒
 #    ConnectTimeout: 1000
 #    # 请求超时时间，单位毫秒
@@ -44,12 +47,12 @@ spring:
 #    # 自配置服务器列表
 #    listOfServers: http://localhost:7001,http://localhost:7002
 
-#ribbon:
-#  eager-load:
-#    # 是否启动饥渴加载？默认值为false
-#    enabled: true
-#    # 饥渴加载的微服务ID
-#    clients: user, product, fund
+ribbon:
+  eager-load:
+    # 是否启动饥渴加载？默认值为false
+    enabled: true
+    # 饥渴加载的微服务ID
+    clients: user, product, fund
 
 management:
   endpoints:

@@ -26,3 +26,5 @@ eureka:
   instance:
     # 服务实例服务器IP
     hostname: localhost
+    # 实例名称
+    instance-id: eureka-server-5001

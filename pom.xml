@@ -10,7 +10,6 @@
     <packaging>pom</packaging><!-- 这里添加，注意不是jar或war -->
 
     <modules>
-        <module>cloud-test</module>
         <module>SpringCloud</module>
     </modules>
 

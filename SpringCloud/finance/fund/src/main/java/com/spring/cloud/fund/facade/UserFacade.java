@@ -33,7 +33,7 @@ public interface UserFacade {
      * @param id -- 用户编号
      * @return 用户信息
      */
-    @GetMapping("/user/info/{id}")  // 注意方法和注解的对应选择
+    @GetMapping("/user/info/{id}")
     public UserInfo getUser(@PathVariable("id") Long id);
 
     /**
