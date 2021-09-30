@@ -5,9 +5,9 @@ spring:
   # Redis配置
   redis:
     # Redis服务器地址
-    host: 192.168.80.130
+    host: 47.96.150.59
     # Redis密码
-    password: abcdefg
+    password: 1314520
     # Jedis客户端
     jedis:
       # 连接池配置
@@ -90,14 +90,14 @@ zuul:
       service-id: product
 
 # resilience4j配置
-resilience4j:
-  ratelimiter:
-    limiters:
-      # 名称为“user”的限速器
-      user:
-        # 时间戳内限制通过的请求数，默认为50
-        limitForPeriod: 3
-        # 配置时间戳，默认值为500 ns
-        limitRefreshPeriodInMillis: 5000
-        # 超时时间
-        timeoutInMillis: 5000
+#resilience4j:
+#  ratelimiter:
+#    limiters:
+#      # 名称为“user”的限速器
+#      user:
+#        # 时间戳内限制通过的请求数，默认为50
+#        limitForPeriod: 3
+#        # 配置时间戳，默认值为500 ns
+#        limitRefreshPeriodInMillis: 5000
+#        # 超时时间
+#        timeoutInMillis: 5000
