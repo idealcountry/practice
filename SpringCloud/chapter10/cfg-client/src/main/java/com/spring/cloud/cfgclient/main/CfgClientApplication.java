@@ -13,7 +13,7 @@ public class CfgClientApplication {
     public static void main(String[] args) {
         SpringApplication.run(CfgClientApplication.class, args);
     }
-
+/*
     // 读取配置文件的信息
     @Value("${version.message}") // ①
     private String versionMsg = null;
@@ -22,5 +22,5 @@ public class CfgClientApplication {
     @GetMapping("/version/message")
     public  String versionMessage() {
         return versionMsg;
-    }
+    }*/
 }

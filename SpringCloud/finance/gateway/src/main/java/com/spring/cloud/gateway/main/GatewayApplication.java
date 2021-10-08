@@ -42,7 +42,7 @@ public class GatewayApplication {
      * @return 路由规则
      */
     @Bean
-    public RouteLocator customRouteLocator(RouteLocatorBuilder builder) {
+    public RouteLocator customRouteLocator1(RouteLocatorBuilder builder) {
         return builder.routes() //开启路由配置
                 // 匹配路径
                 .route(f -> f.path("/user/**") // route方法逻辑是一个断言，后续会论述
@@ -52,26 +52,26 @@ public class GatewayApplication {
                 .build();
     }
 
-//    /**
-//     * 创建路由规则
-//     * @param builder -- 路由构造器
-//     * @return 路由规则
-//     */
-//    @Bean
-//    public RouteLocator customRouteLocator(RouteLocatorBuilder builder) {
-//        ZonedDateTime datetime = LocalDateTime.now()//获取当前时间
-//                // 两分钟后路由失效
-//                .plusMinutes(2)
-//                // 定义国际化区域
-//                .atZone(ZoneId.systemDefault()); // 定义UTC时间 ①
-//        return builder.routes()
-//                // 匹配
-//                .route("/user/**", r -> r.before(datetime) // 使用断言 ②
-//                        // 转发到具体的URI
-//                        .uri("http://localhost:6001"))
-//                // 创建
-//                .build();
-//    }
+    /**
+     * 创建路由规则
+     * @param builder -- 路由构造器
+     * @return 路由规则
+     */
+    @Bean
+    public RouteLocator customRouteLocator(RouteLocatorBuilder builder) {
+        ZonedDateTime datetime = LocalDateTime.now()//获取当前时间
+                // 两分钟后路由失效
+                .plusMinutes(2)
+                // 定义国际化区域
+                .atZone(ZoneId.systemDefault()); // 定义UTC时间 ①
+        return builder.routes()
+                // 匹配
+                .route("/user/**", r -> r.before(datetime) // 使用断言 ②
+                        // 转发到具体的URI
+                        .uri("http://localhost:6001"))
+                // 创建
+                .build();
+    }
 
 //    @Bean
 //    public RouteLocator customRouteLocator(RouteLocatorBuilder builder) {

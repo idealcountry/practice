@@ -1,12 +1,19 @@
+# 配置服务名称
 spring:
   application:
-    name: eureka-server
-  profiles:
-    active: peer1
+    name: admin-eureka
+
+# 端点暴露
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
 
 server:
   port: 1001
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://localhost:1001/eureka,http://localhost:1002/eureka
+#      defaultZone: http://localhost:1001/eureka,http://localhost:1002/eureka
+      defaultZone: http://localhost:1001/eureka
